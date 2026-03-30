@@ -1,0 +1,55 @@
+name: Bug Report
+description: Report a bug in the knowledge ingestion agent
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill out the sections below to help us investigate.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What went wrong?
+      placeholder: The agent wrote to the wrong file / The context report format was incorrect / etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Invoke the agent with `/agents knowledge-ingestion-agent`
+        2. Tell it "Store this rule: payment service must tokenize cards"
+        3. The agent writes to the wrong file or formats the content incorrectly
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Agent version
+      description: Which version of the agent file are you using?
+      placeholder: v1.0.0
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Claude Code version, OS, project type, or other relevant details
+    validations:
+      required: false
