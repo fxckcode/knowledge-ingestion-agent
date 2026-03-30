@@ -1,0 +1,8 @@
+# Normalize line endings
+* text=auto
+
+# Markdown
+*.md text eol=lf
+
+# Agent definition
+agent/*.md text eol=lf
